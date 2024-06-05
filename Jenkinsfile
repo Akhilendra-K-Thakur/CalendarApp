@@ -6,11 +6,6 @@ pipeline {
                 git url: 'https://github.com/Akhilendra-K-Thakur/CalendarApp.git', branch: 'master'
             }
         }
-        stage('Install Dependencies') {
-            steps {
-                sh 'bundle install' // If you are using Bundler for dependency management
-            }
-        }
         stage('Build') {
             steps {
                 sh 'xcodebuild -workspace MyApp.xcworkspace -scheme MyAppScheme -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=14.4" clean build'
