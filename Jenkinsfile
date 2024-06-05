@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Akhilendra-K-Thakur/CalendarApp.git', branch: 'main'
+                git url: 'https://github.com/Akhilendra-K-Thakur/CalendarApp.git', branch: 'master'
             }
         }
         stage('Install Dependencies') {
