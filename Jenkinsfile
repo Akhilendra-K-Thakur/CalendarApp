@@ -37,11 +37,5 @@ pipeline {
             // Clean up actions, such as archiving build artifacts or sending notifications
             archiveArtifacts artifacts: 'build/**/*.ipa', allowEmptyArchive: true
         }
-        failure {
-            // Actions to take in case of failure, such as sending notifications
-        }
-        success {
-            // Actions to take on successful build, such as deploying or further processing
-        }
     }
 }
